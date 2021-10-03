@@ -1,0 +1,47 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Users";
+}
+
+<div class="text-center">
+    <h2>User Details</h2>
+
+    <h3>click on "+" to add a User detail</h3>
+    <h3>click on the row to edit a User detail</h3>
+</div>
+
+@(Html.DevExtreme().DataGrid<UserWebAppSolution.Models.User>()
+    .ID("grid")
+    .Height(400)
+    .DataSource(d => d.Mvc()
+        .Controller("DataGridUser")
+        .LoadAction("Get")
+        .UpdateAction("Put")
+        .InsertAction("Post")
+        .DeleteAction("Delete")
+        .Key("ID")
+    )
+    .ShowBorders(true)
+    .Paging(paging => paging.Enabled(false))
+    .Columns(columns => {
+        columns.Add().DataField("Name")
+                                .ValidationRules(vr => 
+                                { vr.AddRequired().Message("Required"); });
+        columns.Add().DataField("Surname")
+                                .ValidationRules(vr => 
+                                { vr.AddRequired().Message("Required"); });
+        columns.Add().DataField("CellPhoneNumber")
+                                .ValidationRules(vr => {
+                                vr.AddNumeric()
+                                .Message("Only Numbers allowed");
+        });
+    })
+    .Editing(e => e
+        .Mode(GridEditMode.Cell)
+        .RefreshMode(GridEditRefreshMode.Reshape)
+        .AllowAdding(true)
+        .AllowDeleting(true)
+        .AllowUpdating(true)
+    )
+    )

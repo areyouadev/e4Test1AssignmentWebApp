@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Users>
+  <User>
+    <Id>1</Id>
+    <Name>Taps</Name>
+    <Surname>Whitehouse</Surname>
+    <CellPhoneNumber>786578803</CellPhoneNumber>
+  </User>
+  <User>
+    <Id>2</Id>
+    <Name>Abhijit F</Name>
+    <Surname>Kenedy</Surname>
+    <CellPhoneNumber>22893472934</CellPhoneNumber>
+  </User>
+  <User>
+    <Id>3</Id>
+    <Name>Pieter</Name>
+    <Surname>Mabela</Surname>
+    <CellPhoneNumber>786578805</CellPhoneNumber>
+  </User>
+  <User>
+    <Id>4</Id>
+    <Name>Clive</Name>
+    <Surname>Kitchen</Surname>
+    <CellPhoneNumber>786578806</CellPhoneNumber>
+  </User>
+  <User>
+    <Id>5</Id>
+    <Name>Sheeja</Name>
+    <Surname>Jain</Surname>
+    <CellPhoneNumber>786578807</CellPhoneNumber>
+  </User>
+  <User>
+    <Id>6</Id>
+    <Name>Abhijit</Name>
+    <Surname>adasda</Surname>
+    <CellPhoneNumber>1231231</CellPhoneNumber>
+  </User>
+</Users>
